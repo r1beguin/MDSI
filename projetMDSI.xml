@@ -13,6 +13,7 @@
 	</xsd:complexType>
 </xsd:element>
 
+
 <xsd:element name="Theme">
 	<xsd:complexType>
 		<xsd:sequence>
@@ -31,23 +32,54 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element name="Description" type="xsd:string"/>
+			<xsd:element name="ResponsableTheme" Occurs="1">
+				<xsd:keyref name="RespoTheme" refer="MembreUnique">
+					<xsd:selector xpath="Membre"/>
+					<xsd:field xpath="@idmembre"/>
+				</xsd:keyref>
+			</xsd:element>	
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:key name="ThemeUnique">
+		<xsd:selector xpath="Theme"/>
+		<xsd:field xpath="acronyme_theme"/>
+	</xsd:key>
+
 </xsd:element>
+
 
 <xsd:element name="Equipe_recherche">
 	<xsd:complexType>
 		<xsd:sequence>
 			<xsd:element name="nom_equipe" type="xsd:string"/>
 			<xsd:element name="acronyme_equipe" type="xsd:string"/>
-			<xsd:element ref="Membre" minOccurs="1"/>
-			<xsd:element ref="Responsable"/>
+			<xsd:element name="Membre" minOccurs="1">
+				<xsd:keyref name="MembresEquipe" refer="MembreUnique">
+					<xsd:selector xpath="Membre"/>
+					<xsd:field xpath="@idmembre"/>
+				</xsd:keyref>
+			</xsd:element>
+			<xsd:element ref="ResponsableEquipe" Occurs="1">
+				<xsd:keyref name="RespoEquipe" refer="MembreUnique">
+					<xsd:selector xpath="Membre"/>
+					<xsd:field xpath="@idmembre"/>
+				</xsd:keyref>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
+
+	<xsd:key name="EquipeUnique">
+		<xsd:selector xpath="Equipe_recherche"/>
+		<xsd:field xpath="acronyme_equipe"/>
+	</xsd:key>
+
 </xsd:element>
+
 
 <xsd:element name="Membre">
 	<xsd:complexType>
+		<xsd:attribute name="idmembre" type="xsd:ID"/>
 		<xsd:sequence>
 			<xsd:element name="nom" type="xsd:string"/>
 			<xsd:element name="prenom" type="xsd:string"/>
@@ -55,7 +87,12 @@
 			<xsd:element name="mail" type="xsd:string"/>
 		</xsd:sequence>
 	</xsd:complexType>
+	<xsd:key name="MembreUnique">
+		<xsd:selector xpath="Membre"/>
+		<xsd:field xpath="@idmembre"/>
+	</xsd:key>
 </xsd:element>
+
 
 <xsd:element name="Production_scientifique">
 	<xsd:complexType>
@@ -67,6 +104,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:element>
+
 
 <xsd:element name="These">
 	<xsd:complexType>
