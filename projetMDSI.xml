@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:element name="LAAS">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="Theme" Occurs="8"/>
+			<xsd:element ref="Evenement"/>
+			<xsd:element ref="These"/>
+			<xsd:element ref="Equipe_recherche"/>
+			<xsd:element ref="Production_scientifique"/>
+			<xsd:element ref="Projet_recherche"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Theme">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="acronyme_theme">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="IC"/>
+						<xsd:enumeration value="RC"/>
+						<xsd:enumeration value="ROB"/>
+						<xsd:enumeration value="DO"/>
+						<xsd:enumeration value="HOPES"/>
+						<xsd:enumeration value="TICS"/>
+						<xsd:enumeration value="MNBT"/>
+						<xsd:enumeration value="GE"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element name="Description" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Equipe_recherche">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="nom_equipe" type="xsd:string"/>
+			<xsd:element name="acronyme_equipe" type="xsd:string"/>
+			<xsd:element ref="Membre" minOccurs="1"/>
+			<xsd:element ref="Responsable"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Membre">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="nom" type="xsd:string"/>
+			<xsd:element name="prenom" type="xsd:string"/>
+			<xsd:element name="grade" type="xsd:string"/>
+			<xsd:element name="mail" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Production_scientifique">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="titre_production" type="xsd:string"/>
+			<xsd:element name="annee_publication" type="xsd:integer"/>
+			<xsd:element name="nombre_pages" type="xsd:integer"/>
+			<xsd:element ref="Auteur"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="These">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="titre_these" type="xsd:string"/>
+			<xsd:element name="domaine" type="xsd:string"/>
+			<xsd:element ref="Production_scientifique"/>
+			<xsd:element ref="Equipe_recherche" maxOccurs="1"/>
+			<xsd:element ref="Encadrant" minOccurs="1" maxOccurs="3"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:complexType name="Evenement">
+	<xsd:sequence>
+		<xsd:element name="nom_evenement" type="xsd:string"/>
+		<xsd:element name="date_debut_evenement" type="xsd:date"/>
+		<xsd:element name="date_fin_evenement" type="xsd:date"/>
+	</xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="Projet_recherche">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="titre_projet" type="xsd:string"/>
+			
+
