@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- Le LAAS contient 8 themes, des evenements, des theses, des equipes de recherche, des productions scientifiques et des projets de recherche -->
+	<xsd:element name="LAAS">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="ThemeLAAS" minOccurs="8" maxOccurs="8">
+					<xsd:keyref name="themes" refer="ThemeUnique">
+						<xsd:selector xpath="Theme"/>
+						<xsd:field xpath="acronyme_theme"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="EvenementLAAS" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="events" refer="EvenementUnique">
+						<xsd:selector xpath="Evenement"/>
+						<xsd:field xpath="nom_evenement"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="TheseLAAS" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="theses" refer="TheseUnique">
+						<xsd:selector xpath="These"/>
+						<xsd:field xpath="titre_these"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="EquipeRechercheLAAS" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="EquipesRecherche" refer="EquipeUnique">
+						<xsd:selector xpath="Equipe_recherche"/>
+						<xsd:field xpath="acronyme_equipe"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="ProductionScientifiqueLAAS" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="ProdScient" refer="ProductionUnique">
+						<xsd:selector xpath="Production_scientifique"/>
+						<xsd:field xpath="titre_production"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="ProjetRechercheLAAS" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="ProjetsRecherche" refer="ProjetUnique">
+						<xsd:selector xpath="Projet_recherche"/>
+						<xsd:field xpath="acronyme_projet"/>
+					</xsd:keyref>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+<!-- Chaque thème est caractérisé par un acronyme (qui doit faire partie de ces valeurs : IC, RC, ROB, DO, HOPES, TICS, MNBT, GE), une description, un ensemble d'équipes de recherche, et un responsable qui doit faire partie des membres de l'une des équipes du thème. -->
+	<xsd:element name="Theme">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="acronyme_theme">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="IC"/>
+							<xsd:enumeration value="RC"/>
+							<xsd:enumeration value="ROB"/>
+							<xsd:enumeration value="DO"/>
+							<xsd:enumeration value="HOPES"/>
+							<xsd:enumeration value="TICS"/>
+							<xsd:enumeration value="MNBT"/>
+							<xsd:enumeration value="GE"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+					<xsd:key name="ThemeUnique">
+						<xsd:selector xpath="Theme"/>
+						<xsd:field xpath="acronyme_theme"/>
+					</xsd:key>
+				</xsd:element>
+
+				<xsd:element name="Description" type="xsd:string"/>
+
+				<xsd:element name="ResponsableTheme">
+					<xsd:keyref name="RespoTheme" refer="MembreUnique">
+						<xsd:selector xpath="Membre"/>
+						<xsd:field xpath="@idmembre"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="EquipesRecherche" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="EqRech" refer="EquipeUnique">
+						<xsd:selector xpath="Equipe_recherche"/>
+						<xsd:field xpath="acronyme_equipe"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="ProjetsRecherche" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="ProjRech" refer="ProjetUnique">
+						<xsd:selector xpath="Projet_recherche"/>
+						<xsd:field xpath="acronyme_projet"/>
+					</xsd:keyref>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+
+	</xsd:element>
+
+
+<!-- Un membre est caractérisé par un nom, prénom, grade, son adresse email, et la liste de ses productions scientifiques. -->
+	<xsd:element name="Membre">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="nom" type="xsd:string"/>
+
+				<xsd:element name="prenom" type="xsd:string"/>
+
+				<xsd:element name="grade" type="xsd:string"/>
+
+				<xsd:element name="mail" type="xsd:string"/>
+
+				<xsd:element name="productions_scientifiques" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="prod_scient" refer="ProductionUnique">
+						<xsd:selector xpath="Production_scientifique"/>
+						<xsd:field xpath="titre_production"/>
+					</xsd:keyref>
+				</xsd:element>
+
+			</xsd:sequence>
+
+			<xsd:attribute name="idmembre" type="xsd:ID" use="required"/>
+
+		</xsd:complexType>
+
+		<xsd:key name="MembreUnique">
+			<xsd:selector xpath="Membre"/>
+			<xsd:field xpath="@idmembre"/>
+		</xsd:key>
+
+	</xsd:element>
+
+
+<!-- Chaque équipe est caractérisée par un nom, un acronyme, et des membres dont on distingue le responsable de l'équipe. -->
+	<xsd:element name="Equipe_recherche">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="nom_equipe" type="xsd:string"/>
+
+				<xsd:element name="acronyme_equipe" type="xsd:string">
+					<xsd:key name="EquipeUnique">
+						<xsd:selector xpath="Equipe_recherche"/>
+						<xsd:field xpath="acronyme_equipe"/>
+					</xsd:key>
+				</xsd:element>
+
+				<xsd:element name="Membre" minOccurs="1" maxOccurs="unbounded">
+					<xsd:keyref name="MembresEquipe" refer="MembreUnique">
+						<xsd:selector xpath="Membre"/>
+						<xsd:field xpath="@idmembre"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="ResponsableEquipe">
+					<xsd:keyref name="RespoEquipe" refer="MembreUnique">
+						<xsd:selector xpath="Membre"/>
+						<xsd:field xpath="@idmembre"/>
+					</xsd:keyref>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+
+	</xsd:element>
+
+
+<!-- Chaque production est caractérisée par par un titre, le nom des auteurs, dont certains peuvent être des extérieurs, -l’affiliation des auteurs-, l’année de publication, et le nombre de pages. -->
+	<xsd:complexType name="Production_scientifique_type">
+		<xsd:sequence>
+
+			<xsd:element name="titre_production" type="xsd:string">
+				<xsd:key name="ProductionUnique">
+					<xsd:selector xpath="Production_scientifique_type"/>
+					<xsd:field xpath="titre_production"/>
+				</xsd:key>
+			</xsd:element>
+
+			<xsd:element name="annee_publication" type="xsd:integer"/>
+
+			<xsd:element name="nombre_pages" type="xsd:integer"/>
+
+			<xsd:element name="Auteur_Production" maxOccurs="unbounded">
+				<xsd:keyref name="AuteurProduction" refer="AuteurUnique">
+					<xsd:selector xpath="Auteur"/>
+					<xsd:field xpath="@idauteur"/>
+				</xsd:keyref>
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="Production_scientifique" type="Production_scientifique_type"/>
+
+<!-- [...] le nom des auteurs, dont certains peuvent être des extérieurs, l’affiliation des auteurs [...] -->
+	<xsd:element name="Auteur">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="Nom_auteur"/>
+
+				<xsd:element name="Afiliation">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="LAAS"/>
+							<xsd:enumeration value="Exterieur"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:element>
+
+			</xsd:sequence>
+
+			<xsd:attribute name="idauteur" type="xsd:ID" use="required"/>
+
+		</xsd:complexType>
+
+		<xsd:key name="AuteurUnique">
+			<xsd:selector xpath="Auteur"/>
+			<xsd:field xpath="@idauteur"/>
+		</xsd:key>
+
+	</xsd:element>
+
+<!-- Une production scientifique peut être soit de type rapport de recherche, article de conférence, ou revue. -->
+
+<!-- Les rapports de recherche sont caractérisés par le projet de recherche concerné. -->
+	<xsd:complexType name="Rapport_type">
+		<xsd:complexContent>
+			<xsd:extension base="Production_scientifique_type">
+				<xsd:sequence>
+
+					<xsd:element name="ProjetRecherche">
+						<xsd:keyref name="ProjetRechercheConserne" refer="ProjetUnique">
+							<xsd:selector xpath="Projet_recherche"/>
+							<xsd:field xpath="titre_projet"/>
+						</xsd:keyref>
+					</xsd:element>
+
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="Rapport" type="Rapport_type"/>
+
+<!-- Les articles de conférences et les revues sont en plus caractérisées par le nom de la conférence/journal -et la classe de la conférence/journal.- -->
+	<xsd:complexType name="Article_type">
+		<xsd:complexContent>
+			<xsd:extension base="Production_scientifique_type">
+				<xsd:sequence>
+
+					<xsd:element name="nom_conference">
+						<xsd:keyref name="Conf" refer="EvenementUnique">
+							<xsd:selector xpath="Conference"/>
+							<xsd:field xpath="nom_evenement"/>
+						</xsd:keyref>
+					</xsd:element>
+
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="Article_conference" type="Article_type"/>
+
+	<xsd:complexType name="Revue_type">
+		<xsd:complexContent>
+			<xsd:extension base="Production_scientifique_type">
+				<xsd:sequence>
+
+					<xsd:element name="nom_journal" type="xsd:string"/>
+
+					<xsd:element name="classe_journal" type="xsd:string"/>
+
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="Revue" type="Revue_type"/>
+
+
+<!-- Des thèses de doctorats sont encadrées au LAAS au seins des équipes. Chaque thèse est affectée à une équipe. Pour chaque thèse, on distingue son titre, son domaine, ses encadrants (maximum 3) qui font partie des membres de l'équipe concernée par la thèse. Pour chaque doctorat, on connait la liste de ses productions scientifiques. -->
+	<xsd:complexType name="These_type">
+		<xsd:sequence>
+
+			<xsd:element name="titre_these" type="xsd:string">
+				<xsd:key name="TheseUnique">
+					<xsd:selector xpath="These_type"/>
+					<xsd:field xpath="titre_these"/>
+				</xsd:key>
+			</xsd:element>
+
+			<xsd:element name="domaine" type="xsd:string"/>
+
+			<xsd:element name="Equipe_recherche">
+				<xsd:keyref name="Equipe_These" refer="EquipeUnique">
+					<xsd:selector xpath="Equipe_recherche"/>
+					<xsd:field xpath="acronyme_equipe"/>
+				</xsd:keyref>
+			</xsd:element>
+
+			<xsd:element name="Encadrant" minOccurs="1" maxOccurs="3">
+				<xsd:keyref name="EncadrantUnique" refer="MembreUnique">
+					<xsd:selector xpath="Membre"/>
+					<xsd:field xpath="@idmembre"/>
+				</xsd:keyref>
+			</xsd:element>
+
+			<xsd:element name="Production_These">
+				<xsd:keyref name="ProductionThese" refer="ProductionUnique">
+					<xsd:selector xpath="Production_scientifique"/>
+					<xsd:field xpath="titre_production"/>
+				</xsd:keyref>
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+<!-- On distingue les thèses soutenues et les thèses en cours. -->
+
+<!-- Pour les thèses en cours, on renseigne la date de début. -->
+	<xsd:complexType name="These_enCours_type">
+		<xsd:complexContent>
+			<xsd:extension base="These_type">
+				<xsd:sequence>
+					<xsd:element name="date_debut_these" type="xsd:date"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+<!-- Quant aux  thèses soutenues, on connait leur date de début et leur date de soutenance. -->
+	<xsd:complexType name="These_soutenue_type">
+		<xsd:complexContent>
+			<xsd:extension base="These_enCours_type">
+				<xsd:sequence>
+					<xsd:element name="date_soutenance_these" type="xsd:date"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+<!-- Des évènements sont organisés par le LAAS. Chaque événement est associé à un thème et concerne une ou plusieurs équipes. Un événement est caractérisé par un nom, une date de début, et une date de fin. -->
+	<xsd:complexType name="Evenement_type">
+		<xsd:sequence>
+
+			<xsd:element name="nom_evenement" type="xsd:string">
+				<xsd:key name="EvenementUnique">
+					<xsd:selector xpath="Evenement"/>
+					<xsd:field xpath="nom_evenement"/>
+				</xsd:key>
+			</xsd:element>
+
+			<xsd:element name="date_debut_evenement" type="xsd:date"/>
+
+			<xsd:element name="date_fin_evenement" type="xsd:date"/>
+
+			<xsd:element name="Theme_Evenement">
+				<xsd:keyref name="ThemeEvenement" refer="ThemeUnique">
+					<xsd:selector xpath="Theme"/>
+					<xsd:field xpath="acronyme_theme"/>
+				</xsd:keyref>
+			</xsd:element>
+
+			<xsd:element name="Equipe_Evenement" minOccurs="1" maxOccurs="unbounded">
+				<xsd:keyref name="EquipeEvenement" refer="EquipeUnique">
+					<xsd:selector xpath="Equipe_recherche"/>
+					<xsd:field xpath="acronyme_equipe"/>
+				</xsd:keyref>
+			</xsd:element>
+
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="Evenement" type="Evenement_type"/>
+
+<!-- On s'intéresse aux conférences et aux réunions de groupes de travail. -->
+	<xsd:element name="Reunion" type="Evenement_type"/>
+
+<!-- Les conférences sont en plus caractérisés par la classe de la conférence (qui doit être soit  A, B, ou C). -->
+	<xsd:complexType name="Conference_type">
+		<xsd:complexContent>
+			<xsd:extension base="Evenement_type">
+				<xsd:sequence>
+					<xsd:element name="classe_conference">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="A"/>
+								<xsd:enumeration value="B"/>
+								<xsd:enumeration value="C"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:element name="Conference" type="Conference_type"/>
+
+
+<!-- Des projets de recherche concernent un ou plusieurs thèmes et concernent une ou plusieurs équipes. Un projet est caractérisé par un titre, un acronyme, date de début, durée,  la liste des partenaires participants,  son coût global, le budget alloué au LAAS, et le porteur qui doit faire partie des membres de l'une des équipes concernées. -->
+	<xsd:element name="Projet_recherche">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="titre_projet" type="xsd:string"/>
+
+				<xsd:element name="acronyme_projet" type="xsd:string">	
+					<xsd:key name="ProjetUnique">
+						<xsd:selector xpath="Projet_recherche"/>
+						<xsd:field xpath="acronyme_projet"/>
+					</xsd:key>
+				</xsd:element>
+
+				<xsd:element name="date_debut_projet" type="xsd:date"/>
+
+				<xsd:element name="duree" type="xsd:int"/>
+
+				<xsd:element name="cout" type="xsd:int"/>
+
+				<xsd:element name="budget_LAAS" type="xsd:int"/>
+
+				<xsd:element name="Porteur_projet">
+					<xsd:keyref name="PorteurUnique" refer="MembreUnique">
+						<xsd:selector xpath="Membre"/>
+						<xsd:field xpath="@idmembre"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="Equipe_projet">
+					<xsd:keyref name="EquipeProjet" refer="EquipeUnique">
+						<xsd:selector xpath="Equipe_recherche"/>
+						<xsd:field xpath="acronyme_equipe"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="Partenaire_projet">
+					<xsd:keyref name="PartenaireProjet" refer="PartenaireUnique">
+						<xsd:selector xpath="Partenaire"/>
+						<xsd:field xpath="nom_partenaire"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="Rapport_Projet">
+					<xsd:keyref name="RapportProjet" refer="ProductionUnique">
+						<xsd:selector xpath="Rapport"/>
+						<xsd:field xpath="titre_production"/>
+					</xsd:keyref>
+				</xsd:element>
+
+			</xsd:sequence>
+		</xsd:complexType>
+
+	</xsd:element>
+
+
+<!-- Chaque partenaire participant est caractérisé par un nom et un pays. -->
+	<xsd:element name="Partenaire">
+		<xsd:complexType>
+			<xsd:sequence>
+
+				<xsd:element name="nom_partenaire">
+					<xsd:key name="PartenaireUnique">
+						<xsd:selector xpath="Partenaire"/>
+						<xsd:field xpath="nom_partenaire"/>
+					</xsd:key>
+				</xsd:element>
+
+				<xsd:element name="pays_partenaire"/>
+
+			</xsd:sequence>
+		</xsd:complexType>
+
+	</xsd:element>
+
+
+</xsd:schema>
