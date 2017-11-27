@@ -4,113 +4,113 @@
 
 	<Theme> 
 		
-		<acronyme_theme> IC </acronyme_theme>
+		<acronyme_theme>IC</acronyme_theme>
 
 		<Description> Informatique Critique </Description>
 
 		<ResponsableTheme> M1 </ResponsableTheme>
 
-		<EquipeRecherche> E1 </EquipeRecherche>
+		<EquipesRecherche> E1 </EquipesRecherche>
 
-		<ProjetRecherche> P1 </ProjetRecherche>
+		<ProjetsRecherche> P1 </ProjetsRecherche>
 
 	</Theme>
 
 	<Theme> 
 		
-		<acronyme_theme> RC </acronyme_theme>
+		<acronyme_theme>RC</acronyme_theme>
 
 		<Description> Réseaux et Communication </Description>
 
 		<ResponsableTheme> M2 </ResponsableTheme>
 
-		<EquipeRecherche> E2 </EquipeRecherche>
+		<EquipesRecherche> E2 </EquipesRecherche>
 
-		<ProjetRecherche> P2 </ProjetRecherche>
+		<ProjetsRecherche> P2 </ProjetsRecherche>
 
 	</Theme>
 
 	<Theme> 
 		
-		<acronyme_theme> ROB </acronyme_theme>
+		<acronyme_theme>ROB</acronyme_theme>
 
 		<Description> Robotique </Description>
 
 		<ResponsableTheme> M3 </ResponsableTheme>
 
-		<EquipeRecherche> E3 </EquipeRecherche>
+		<EquipesRecherche> E3 </EquipesRecherche>
 
-		<ProjetRecherche> P3 </ProjetRecherche>
+		<ProjetsRecherche> P3 </ProjetsRecherche>
 
 	</Theme>
 	
 	<Theme> 
 		
-		<acronyme_theme> DO </acronyme_theme>
+		<acronyme_theme>DO</acronyme_theme>
 
 		<Description> Décision et Optimisation </Description>
 
 		<ResponsableTheme> M4 </ResponsableTheme>
 
-		<EquipeRecherche> E4 </EquipeRecherche>
+		<EquipesRecherche> E4 </EquipesRecherche>
 
-		<ProjetRecherche> P4 </ProjetRecherche>
+		<ProjetsRecherche> P4 </ProjetsRecherche>
 
 	</Theme>
 
 	<Theme> 
 		
-		<acronyme_theme> HOPES </acronyme_theme>
+		<acronyme_theme>HOPES</acronyme_theme>
 
 		<Description> Hyperfréquences et Optique </Description>
 
 		<ResponsableTheme> M5 </ResponsableTheme>
 
-		<EquipeRecherche> E5 </EquipeRecherche>
+		<EquipesRecherche> E5 </EquipesRecherche>
 
-		<ProjetRecherche> P5 </ProjetRecherche>
+		<ProjetsRecherche> P5 </ProjetsRecherche>
 
 	</Theme>
 	
 	<Theme> 
 		
-		<acronyme_theme> TICS </acronyme_theme>
+		<acronyme_theme>TICS</acronyme_theme>
 
 		<Description> Technologie et Instrumentation pour le monitoring de systèmes complexes </Description>
 
 		<ResponsableTheme> M6 </ResponsableTheme>
 
-		<EquipeRecherche> E6 </EquipeRecherche>
+		<EquipesRecherche> E6 </EquipesRecherche>
 
-		<ProjetRecherche> P6 </ProjetRecherche>
+		<ProjetsRecherche> P6 </ProjetsRecherche>
 
 	</Theme>
 
 	<Theme> 
 		
-		<acronyme_theme> MNBT </acronyme_theme>
+		<acronyme_theme>MNBT</acronyme_theme>
 
 		<Description> Micro Nano Bio Technologies </Description>
 
 		<ResponsableTheme> M7 </ResponsableTheme>
 
-		<EquipeRecherche> E7 </EquipeRecherche>
+		<EquipesRecherche> E7 </EquipesRecherche>
 
-		<ProjetRecherche> P7 </ProjetRecherche>
+		<ProjetsRecherche> P7 </ProjetsRecherche>
 
 	</Theme>
 
 	<Theme> 
 		
-		<acronyme_theme> GE </acronyme_theme>
+		<acronyme_theme>GE</acronyme_theme>
 
 		<Description> Gestion de l'Energie </Description>
 
 		<ResponsableTheme> M8 </ResponsableTheme>
 
-		<EquipeRecherche> E8 </EquipeRecherche>
+		<EquipesRecherche> E8 </EquipesRecherche>
 
-		<ProjetRecherche> P8 </ProjetRecherche>
+		<ProjetsRecherche> P8 </ProjetsRecherche>
 
 	</Theme>
 
@@ -243,7 +243,7 @@
 		
 		<Nom_auteur> nom1 </Nom_auteur>
 
-		<Affiliation> LAAS </Afiliation>
+		<Affiliation>LAAS</Affiliation>
 
 	</Auteur>
 
@@ -251,7 +251,7 @@
 		
 		<Nom_auteur> nom2 </Nom_auteur>
 
-		<Affiliation> Exterieur </Afiliation>
+		<Affiliation>Exterieur</Affiliation>
 
 	</Auteur>
 
@@ -357,11 +357,11 @@
 
 		<nom_evenement> Reunion1 </nom_evenement>
 
-		<date_debut_evenement> 2017-11-27 </date_debut_evenement>
+		<date_debut_evenement>2017-11-27</date_debut_evenement>
 
-		<date_fin_evenement> 2017-11-28 </date_fin_evenement>
+		<date_fin_evenement>2017-11-28</date_fin_evenement>
 
-		<Theme_Evenement> IC </Theme_Evenement>
+		<Theme_Evenement>IC</Theme_Evenement>
 
 		<Equipe_Evenement> E1 </Equipe_Evenement>
 
@@ -372,15 +372,15 @@
 
 		<nom_evenement> Conference1 </nom_evenement>
 
-		<date_debut_evenement> 2017-11-20 </date_debut_evenement>
+		<date_debut_evenement>2017-11-20</date_debut_evenement>
 
-		<date_fin_evenement> 2017-11-26 </date_fin_evenement>
+		<date_fin_evenement>2017-11-26</date_fin_evenement>
 
 		<Theme_Evenement> ROB </Theme_Evenement>
 
 		<Equipe_Evenement> E2 </Equipe_Evenement>
 
-		<classe_conference> A </classe_conference>
+		<classe_conference>A</classe_conference>
 
 	</Conference>
 
@@ -397,7 +397,7 @@
 
 		<RapportThese> R1 </RapportThese>
 
-		<date_debut_these> 2017-11-26 </date_debut_these>
+		<date_debut_these>2017-11-26</date_debut_these>
 
 	</These_enCours>
 
@@ -418,26 +418,26 @@
 
 		<RapportThese> R2 </RapportThese>
 
-		<date_debut_these> 2014-11-26 </date_debut_these>
+		<date_debut_these>2014-11-26</date_debut_these>
 
-		<date_soutenance_these> 2017-11-20 </date_soutenance_these>
+		<date_soutenance_these>2017-11-20</date_soutenance_these>
 
 	</These_Soutenue>
 
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet1 </titre_projet>
 
 		<acronyme_projet> P1 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M1 </Porteur_projet>
 
@@ -445,23 +445,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R1 <Rapport_projet>
+		<Rapport_Projet> R1 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet2 </titre_projet>
 
 		<acronyme_projet> P2 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M2 </Porteur_projet>
 
@@ -469,23 +469,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R2 <Rapport_projet>
+		<Rapport_Projet> R2 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet3 </titre_projet>
 
 		<acronyme_projet> P3 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M3 </Porteur_projet>
 
@@ -493,23 +493,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R3 <Rapport_projet>
+		<Rapport_Projet> R3 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet4 </titre_projet>
 
 		<acronyme_projet> P4 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M4 </Porteur_projet>
 
@@ -517,23 +517,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R4 <Rapport_projet>
+		<Rapport_Projet> R4 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet5 </titre_projet>
 
 		<acronyme_projet> P5 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M5 </Porteur_projet>
 
@@ -541,23 +541,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R5 <Rapport_projet>
+		<Rapport_Projet> R5 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet6 </titre_projet>
 
 		<acronyme_projet> P6 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M6 </Porteur_projet>
 
@@ -565,23 +565,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R6 <Rapport_projet>
+		<Rapport_Projet> R6 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet7 </titre_projet>
 
 		<acronyme_projet> P7 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M7 </Porteur_projet>
 
@@ -589,23 +589,23 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R7 <Rapport_projet>
+		<Rapport_Projet> R7 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
-	<Projet_Recherche> 
+	<Projet_recherche> 
 
 		<titre_projet> Projet8 </titre_projet>
 
 		<acronyme_projet> P8 </acronyme_projet>
 
-		<date_debut_projet> 2017-11-26 </date_debut_projet>
+		<date_debut_projet>2017-11-26</date_debut_projet>
 
-		<duree> 5 </duree>
+		<duree>5</duree>
 
-		<cout> 42 000 </cout>
+		<cout>42000</cout>
 
-		<budget_LAAS> 10 000 </budget_LASS>
+		<budget_LAAS>10000</budget_LAAS>
 
 		<Porteur_projet> M8 </Porteur_projet>
 
@@ -613,9 +613,9 @@
 
 		<Partenaire_projet> Part1 </Partenaire_projet>
 	
-		<Rapport_projet> R8 <Rapport_projet>
+		<Rapport_Projet> R8 </Rapport_Projet>
 
-	</Projet_Recherche>
+	</Projet_recherche>
 
 
 	<Partenaire> 
@@ -750,8 +750,6 @@
 
 		<Auteur_Production> A1 </Auteur_Production>
 
-		<ProjetRecherche> P8 </ProjetRecherche>
-
 		<nom_journal> journal1 </nom_journal>
 
 		<classe_journal> A </classe_journal>
@@ -817,7 +815,7 @@
 
 		<Auteur_Production> A1 </Auteur_Production>
 
-		<nom_conference> Conference1 </nom_journal>
+		<nom_conference> Conference1 </nom_conference>
 
 	</Article_conference>
 
@@ -831,7 +829,7 @@
 
 		<Auteur_Production> A1 </Auteur_Production>
 
-		<nom_conference> Conference1 </nom_journal>
+		<nom_conference> Conference1 </nom_conference>
 
 	</Article_conference>
 
@@ -845,7 +843,7 @@
 
 		<Auteur_Production> A2 </Auteur_Production>
 
-		<nom_conference> Conference1 </nom_journal>
+		<nom_conference> Conference1 </nom_conference>
 
 	</Article_conference>
 
@@ -859,7 +857,7 @@
 
 		<Auteur_Production> A2 </Auteur_Production>
 
-		<nom_conference> Conference1 </nom_journal>
+		<nom_conference> Conference1 </nom_conference>
 
 	</Article_conference>
 
