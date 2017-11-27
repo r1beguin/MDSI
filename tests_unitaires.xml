@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LAAS>
+
+	<Theme> 
+		
+		<acronyme_theme> IC </acronyme_theme>
+
+		<Description> Informatique Critique </Description>
+
+		<ResponsableTheme> M1 </ResponsableTheme>
+
+		<EquipeRecherche> E1 </EquipeRecherche>
+
+		<ProjetRecherche> P1 </ProjetRecherche>
+
+	</Theme>
+
+	<Theme> 
+		
+		<acronyme_theme> RC </acronyme_theme>
+
+		<Description> Réseaux et Communication </Description>
+
+		<ResponsableTheme> M2 </ResponsableTheme>
+
+		<EquipeRecherche> E2 </EquipeRecherche>
+
+		<ProjetRecherche> P2 </ProjetRecherche>
+
+	</Theme>
+
+	<Theme> 
+		
+		<acronyme_theme> ROB </acronyme_theme>
+
+		<Description> Robotique </Description>
+
+		<ResponsableTheme> M3 </ResponsableTheme>
+
+		<EquipeRecherche> E3 </EquipeRecherche>
+
+		<ProjetRecherche> P3 </ProjetRecherche>
+
+	</Theme>
+	
+	<Theme> 
+		
+		<acronyme_theme> DO </acronyme_theme>
+
+		<Description> Décision et Optimisation </Description>
+
+		<ResponsableTheme> M4 </ResponsableTheme>
+
+		<EquipeRecherche> E4 </EquipeRecherche>
+
+		<ProjetRecherche> P4 </ProjetRecherche>
+
+	</Theme>
+
+	<Theme> 
+		
+		<acronyme_theme> HOPES </acronyme_theme>
+
+		<Description> Hyperfréquences et Optique </Description>
+
+		<ResponsableTheme> M5 </ResponsableTheme>
+
+		<EquipeRecherche> E5 </EquipeRecherche>
+
+		<ProjetRecherche> P5 </ProjetRecherche>
+
+	</Theme>
+	
+	<Theme> 
+		
+		<acronyme_theme> TICS </acronyme_theme>
+
+		<Description> Technologie et Instrumentation pour le monitoring de systèmes complexes </Description>
+
+		<ResponsableTheme> M6 </ResponsableTheme>
+
+		<EquipeRecherche> E6 </EquipeRecherche>
+
+		<ProjetRecherche> P6 </ProjetRecherche>
+
+	</Theme>
+
+	<Theme> 
+		
+		<acronyme_theme> MNBT </acronyme_theme>
+
+		<Description> Micro Nano Bio Technologies </Description>
+
+		<ResponsableTheme> M7 </ResponsableTheme>
+
+		<EquipeRecherche> E7 </EquipeRecherche>
+
+		<ProjetRecherche> P7 </ProjetRecherche>
+
+	</Theme>
+
+	<Theme> 
+		
+		<acronyme_theme> GE </acronyme_theme>
+
+		<Description> Gestion de l'Energie </Description>
+
+		<ResponsableTheme> M8 </ResponsableTheme>
+
+		<EquipeRecherche> E8 </EquipeRecherche>
+
+		<ProjetRecherche> P8 </ProjetRecherche>
+
+	</Theme>
+
+
+	<Membre idmembre="M1"> 
+
+		<nom> nom1 </nom>
+
+		<prenom> prenom1 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom1.nom1@laas.fr </mail>
+
+		<RapportMembre> R1 </RapportMembre>
+
+	</Membre>
+
+
+	<Membre idmembre="M2"> 
+
+		<nom> nom2 </nom>
+
+		<prenom> prenom2 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom2.nom2@laas.fr </mail>
+
+		<RevueMembre> Rev1 </RevueMembre>
+
+	</Membre>
+
+	<Membre idmembre="M3"> 
+
+		<nom> nom2 </nom>
+
+		<prenom> prenom2 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom2.nom2@laas.fr </mail>
+
+		<ArticleMembre> AC1 </ArticleMembre>
+
+	</Membre>
+
+	<Membre idmembre="M4"> 
+
+		<nom> nom4 </nom>
+
+		<prenom> prenom4 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom4.nom4@laas.fr </mail>
+
+		<RapportMembre> R2 </RapportMembre>
+
+		<RevueMembre> Rev2 </RevueMembre>
+
+	</Membre>
+
+	<Membre idmembre="M5"> 
+
+		<nom> nom5 </nom>
+
+		<prenom> prenom5 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom5.nom5@laas.fr </mail>
+
+		<RapportMembre> R3 </RapportMembre>
+
+		<ArticleMembre> AC2 </ArticleMembre>
+
+	</Membre>
+
+	<Membre idmembre="M6"> 
+
+		<nom> nom6 </nom>
+
+		<prenom> prenom6 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom6.nom6@laas.fr </mail>
+
+		<RevueMembre> Rev3 </RevueMembre>
+
+		<ArticleMembre> AC3 </ArticleMembre>
+
+	</Membre>
+
+	<Membre idmembre="M7"> 
+
+		<nom> nom7 </nom>
+
+		<prenom> prenom7 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom7.nom7@laas.fr </mail>
+
+		<RapportMembre> R5 </RapportMembre>
+
+		<RevueMembre> Rev4 </RevueMembre>
+
+		<ArticleMembre> AC4 </ArticleMembre>
+
+	</Membre>
+
+	<Membre idmembre="M8"> 
+
+		<nom> nom8 </nom>
+
+		<prenom> prenom8 </prenom>
+
+		<grade> MC </grade>
+
+		<mail> prenom8.nom8@laas.fr </mail>
+
+		<RapportMembre> R6 </RapportMembre>
+
+	</Membre>
+
+
+	<Auteur idauteur="A1"> 
+		
+		<Nom_auteur> nom1 </Nom_auteur>
+
+		<Affiliation> LAAS </Afiliation>
+
+	</Auteur>
+
+	<Auteur idauteur="A2"> 
+		
+		<Nom_auteur> nom2 </Nom_auteur>
+
+		<Affiliation> Exterieur </Afiliation>
+
+	</Auteur>
+
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe1 </nom_equipe>
+
+		<acronyme_equipe> E1 </acronyme_equipe>
+
+		<Membre> M1 </Membre>
+
+		<ResponsableEquipe> M1 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe2 </nom_equipe>
+
+		<acronyme_equipe> E2 </acronyme_equipe>
+
+		<Membre> M2 </Membre>
+
+		<ResponsableEquipe> M2 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe3 </nom_equipe>
+
+		<acronyme_equipe> E3 </acronyme_equipe>
+
+		<Membre> M3 </Membre>
+
+		<ResponsableEquipe> M3 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe4 </nom_equipe>
+
+		<acronyme_equipe> E4 </acronyme_equipe>
+
+		<Membre> M4 </Membre>
+
+		<ResponsableEquipe> M4 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe5 </nom_equipe>
+
+		<acronyme_equipe> E5 </acronyme_equipe>
+
+		<Membre> M5 </Membre>
+
+		<ResponsableEquipe> M5 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe6 </nom_equipe>
+
+		<acronyme_equipe> E6 </acronyme_equipe>
+
+		<Membre> M6 </Membre>
+
+		<ResponsableEquipe> M6 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe7 </nom_equipe>
+
+		<acronyme_equipe> E7 </acronyme_equipe>
+
+		<Membre> M7 </Membre>
+
+		<ResponsableEquipe> M7 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+	<Equipe_recherche> 
+
+		<nom_equipe> Equipe8 </nom_equipe>
+
+		<acronyme_equipe> E8 </acronyme_equipe>
+
+		<Membre> M8 </Membre>
+
+		<ResponsableEquipe> M8 </ResponsableEquipe>
+
+	</Equipe_recherche>
+
+
+	<Reunion> 
+
+		<nom_evenement> Reunion1 </nom_evenement>
+
+		<date_debut_evenement> 2017-11-27 </date_debut_evenement>
+
+		<date_fin_evenement> 2017-11-28 </date_fin_evenement>
+
+		<Theme_Evenement> IC </Theme_Evenement>
+
+		<Equipe_Evenement> E1 </Equipe_Evenement>
+
+	</Reunion>
+
+
+	<Conference> 
+
+		<nom_evenement> Conference1 </nom_evenement>
+
+		<date_debut_evenement> 2017-11-20 </date_debut_evenement>
+
+		<date_fin_evenement> 2017-11-26 </date_fin_evenement>
+
+		<Theme_Evenement> ROB </Theme_Evenement>
+
+		<Equipe_Evenement> E2 </Equipe_Evenement>
+
+		<classe_conference> A </classe_conference>
+
+	</Conference>
+
+
+	<These_enCours> 
+
+		<titre_these> These1 </titre_these>
+
+		<domaine> hfgbbf </domaine>
+
+		<Equipe_recherche> E1 </Equipe_recherche>
+
+		<Encadrant> M1 </Encadrant>
+
+		<RapportThese> R1 </RapportThese>
+
+		<date_debut_these> 2017-11-26 </date_debut_these>
+
+	</These_enCours>
+
+
+	<These_Soutenue> 
+
+		<titre_these> These2 </titre_these>
+
+		<domaine> gcqsdkjhvs </domaine>
+
+		<Equipe_recherche> E2 </Equipe_recherche>
+
+		<Encadrant> M2 </Encadrant>
+
+		<Encadrant> M3 </Encadrant>
+
+		<Encadrant> M4 </Encadrant>
+
+		<RapportThese> R2 </RapportThese>
+
+		<date_debut_these> 2014-11-26 </date_debut_these>
+
+		<date_soutenance_these> 2017-11-20 </date_soutenance_these>
+
+	</These_Soutenue>
+
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet1 </titre_projet>
+
+		<acronyme_projet> P1 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M1 </Porteur_projet>
+
+		<Equipe_projet> E1 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R1 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet2 </titre_projet>
+
+		<acronyme_projet> P2 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M2 </Porteur_projet>
+
+		<Equipe_projet> E2 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R2 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet3 </titre_projet>
+
+		<acronyme_projet> P3 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M3 </Porteur_projet>
+
+		<Equipe_projet> E3 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R3 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet4 </titre_projet>
+
+		<acronyme_projet> P4 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M4 </Porteur_projet>
+
+		<Equipe_projet> E4 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R4 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet5 </titre_projet>
+
+		<acronyme_projet> P5 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M5 </Porteur_projet>
+
+		<Equipe_projet> E5 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R5 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet6 </titre_projet>
+
+		<acronyme_projet> P6 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M6 </Porteur_projet>
+
+		<Equipe_projet> E6 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R6 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet7 </titre_projet>
+
+		<acronyme_projet> P7 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M7 </Porteur_projet>
+
+		<Equipe_projet> E7 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R7 <Rapport_projet>
+
+	</Projet_Recherche>
+
+	<Projet_Recherche> 
+
+		<titre_projet> Projet8 </titre_projet>
+
+		<acronyme_projet> P8 </acronyme_projet>
+
+		<date_debut_projet> 2017-11-26 </date_debut_projet>
+
+		<duree> 5 </duree>
+
+		<cout> 42 000 </cout>
+
+		<budget_LAAS> 10 000 </budget_LASS>
+
+		<Porteur_projet> M8 </Porteur_projet>
+
+		<Equipe_projet> E8 </Equipe_projet>
+
+		<Partenaire_projet> Part1 </Partenaire_projet>
+	
+		<Rapport_projet> R8 <Rapport_projet>
+
+	</Projet_Recherche>
+
+
+	<Partenaire> 
+
+		<nom_partenaire> P1 </nom_partenaire>
+
+		<pays_partenaire> FRANCE </pays_partenaire>
+
+	</Partenaire>
+
+
+	<Rapport> 
+
+		<titre_production> R1 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<ProjetRecherche> P1 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R2 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<ProjetRecherche> P2 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R3 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<ProjetRecherche> P3 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R4 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<ProjetRecherche> P4 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R5 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<ProjetRecherche> P5 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R6 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<ProjetRecherche> P6 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R7 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<ProjetRecherche> P7 </ProjetRecherche>
+
+	</Rapport>
+
+	<Rapport> 
+
+		<titre_production> R8 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<ProjetRecherche> P8 </ProjetRecherche>
+
+	</Rapport>
+
+
+	<Revue> 
+
+		<titre_production> Rev1 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<ProjetRecherche> P8 </ProjetRecherche>
+
+		<nom_journal> journal1 </nom_journal>
+
+		<classe_journal> A </classe_journal>
+
+	</Revue>
+
+	<Revue> 
+
+		<titre_production> Rev2 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<nom_journal> journal1 </nom_journal>
+
+		<classe_journal> A </classe_journal>
+
+	</Revue>
+
+	<Revue> 
+
+		<titre_production> Rev3 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<nom_journal> journal1 </nom_journal>
+
+		<classe_journal> A </classe_journal>
+
+	</Revue>
+
+	<Revue> 
+
+		<titre_production> Rev4 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<nom_journal> journal1 </nom_journal>
+
+		<classe_journal> A </classe_journal>
+
+	</Revue>
+
+
+	<Article_conference> 
+
+		<titre_production> AC1 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<nom_conference> Conference1 </nom_journal>
+
+	</Article_conference>
+
+	<Article_conference> 
+
+		<titre_production> AC2 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A1 </Auteur_Production>
+
+		<nom_conference> Conference1 </nom_journal>
+
+	</Article_conference>
+
+	<Article_conference> 
+
+		<titre_production> AC3 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<nom_conference> Conference1 </nom_journal>
+
+	</Article_conference>
+
+	<Article_conference> 
+
+		<titre_production> AC4 </titre_production>
+
+		<annee_publication> 2017 </annee_publication>
+
+		<nombre_pages> 100 </nombre_pages>
+
+		<Auteur_Production> A2 </Auteur_Production>
+
+		<nom_conference> Conference1 </nom_journal>
+
+	</Article_conference>
+
+
+</LAAS>
