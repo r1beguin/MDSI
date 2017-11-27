@@ -8,47 +8,31 @@
 		<xsd:complexType>
 			<xsd:sequence>
 
-				<xsd:element name="ThemeLAAS" minOccurs="8" maxOccurs="8">
-					<xsd:keyref name="themes" refer="ThemeUnique">
-						<xsd:selector xpath="Theme"/>
-						<xsd:field xpath="acronyme_theme"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Theme" minOccurs="8" maxOccurs="8"/>
 
-				<xsd:element name="EvenementLAAS" minOccurs="1" maxOccurs="unbounded">
-					<xsd:keyref name="events" refer="EvenementUnique">
-						<xsd:selector xpath="Evenement"/>
-						<xsd:field xpath="nom_evenement"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Membre" minOccurs="1" maxOccurs="unbounded"/>
 
-				<xsd:element name="TheseLAAS" minOccurs="1" maxOccurs="unbounded">
-					<xsd:keyref name="theses" refer="TheseUnique">
-						<xsd:selector xpath="These"/>
-						<xsd:field xpath="titre_these"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Auteur" minOccurs="1" maxOccurs="unbounded"/>
 
-				<xsd:element name="EquipeRechercheLAAS" minOccurs="1" maxOccurs="unbounded">
-					<xsd:keyref name="EquipesRecherche" refer="EquipeUnique">
-						<xsd:selector xpath="Equipe_recherche"/>
-						<xsd:field xpath="acronyme_equipe"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Equipe_recherche" minOccurs="1" maxOccurs="unbounded"/>
 
-				<xsd:element name="ProductionScientifiqueLAAS" minOccurs="1" maxOccurs="unbounded">
-					<xsd:keyref name="ProdScient" refer="ProductionUnique">
-						<xsd:selector xpath="Production_scientifique"/>
-						<xsd:field xpath="titre_production"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Reunion" minOccurs="1" maxOccurs="unbounded"/>
 
-				<xsd:element name="ProjetRechercheLAAS" minOccurs="1" maxOccurs="unbounded">
-					<xsd:keyref name="ProjetsRecherche" refer="ProjetUnique">
-						<xsd:selector xpath="Projet_recherche"/>
-						<xsd:field xpath="acronyme_projet"/>
-					</xsd:keyref>
-				</xsd:element>
+				<xsd:element ref="Conference" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="These_enCours" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="These_Soutenue" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="Projet_recherche" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="Partenaire" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="Rapport" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="Revue" minOccurs="1" maxOccurs="unbounded"/>
+
+				<xsd:element ref="Article_conference" minOccurs="1" maxOccurs="unbounded"/>
 
 			</xsd:sequence>
 		</xsd:complexType>
@@ -121,9 +105,23 @@
 
 				<xsd:element name="mail" type="xsd:string"/>
 
-				<xsd:element name="productions_scientifiques" minOccurs="0" maxOccurs="unbounded">
-					<xsd:keyref name="prod_scient" refer="ProductionUnique">
-						<xsd:selector xpath="Production_scientifique"/>
+				<xsd:element name="RapportMembre" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="rapport_membre" refer="ProductionUnique">
+						<xsd:selector xpath="Rapport"/>
+						<xsd:field xpath="titre_production"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="RevueMembre" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="revue_membre" refer="ProductionUnique">
+						<xsd:selector xpath="Revue"/>
+						<xsd:field xpath="titre_production"/>
+					</xsd:keyref>
+				</xsd:element>
+
+				<xsd:element name="ArticleMembre" minOccurs="0" maxOccurs="unbounded">
+					<xsd:keyref name="article_membre" refer="ProductionUnique">
+						<xsd:selector xpath="Article_conference"/>
 						<xsd:field xpath="titre_production"/>
 					</xsd:keyref>
 				</xsd:element>
@@ -200,8 +198,6 @@
 
 		</xsd:sequence>
 	</xsd:complexType>
-
-	<xsd:element name="Production_scientifique" type="Production_scientifique_type"/>
 
 <!-- [...] le nom des auteurs, dont certains peuvent être des extérieurs, l’affiliation des auteurs [...] -->
 	<xsd:element name="Auteur">
@@ -341,6 +337,8 @@
 		</xsd:complexContent>
 	</xsd:complexType>
 
+	<xsd:element name="These_enCours" type="These_enCours_type"/>
+
 <!-- Quant aux  thèses soutenues, on connait leur date de début et leur date de soutenance. -->
 	<xsd:complexType name="These_soutenue_type">
 		<xsd:complexContent>
@@ -351,6 +349,8 @@
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
+
+	<xsd:element name="These_Soutenue" type="These_soutenue_type"/>
 
 
 <!-- Des évènements sont organisés par le LAAS. Chaque événement est associé à un thème et concerne une ou plusieurs équipes. Un événement est caractérisé par un nom, une date de début, et une date de fin. -->
@@ -385,8 +385,6 @@
 		</xsd:sequence>
 	</xsd:complexType>
 
-	<xsd:element name="Evenement" type="Evenement_type"/>
-
 <!-- On s'intéresse aux conférences et aux réunions de groupes de travail. -->
 	<xsd:element name="Reunion" type="Evenement_type"/>
 
@@ -395,6 +393,7 @@
 		<xsd:complexContent>
 			<xsd:extension base="Evenement_type">
 				<xsd:sequence>
+
 					<xsd:element name="classe_conference">
 						<xsd:simpleType>
 							<xsd:restriction base="xsd:string">
@@ -404,6 +403,7 @@
 							</xsd:restriction>
 						</xsd:simpleType>
 					</xsd:element>
+
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -464,7 +464,6 @@
 
 			</xsd:sequence>
 		</xsd:complexType>
-
 	</xsd:element>
 
 
@@ -484,7 +483,6 @@
 
 			</xsd:sequence>
 		</xsd:complexType>
-
 	</xsd:element>
 
 
