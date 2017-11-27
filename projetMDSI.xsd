@@ -204,9 +204,9 @@
 		<xsd:complexType>
 			<xsd:sequence>
 
-				<xsd:element name="Nom_auteur"/>
+				<xsd:element name="Nom_auteur" type="xsd:string"/>
 
-				<xsd:element name="Afiliation">
+				<xsd:element name="Affiliation">
 					<xsd:simpleType>
 						<xsd:restriction base="xsd:string">
 							<xsd:enumeration value="LAAS"/>
@@ -237,7 +237,7 @@
 				<xsd:sequence>
 
 					<xsd:element name="ProjetRecherche">
-						<xsd:keyref name="ProjetRechercheConserne" refer="ProjetUnique">
+						<xsd:keyref name="ProjetRechercheConcerne" refer="ProjetUnique">
 							<xsd:selector xpath="Projet_recherche"/>
 							<xsd:field xpath="titre_projet"/>
 						</xsd:keyref>
@@ -314,9 +314,23 @@
 				</xsd:keyref>
 			</xsd:element>
 
-			<xsd:element name="Production_These">
-				<xsd:keyref name="ProductionThese" refer="ProductionUnique">
-					<xsd:selector xpath="Production_scientifique"/>
+			<xsd:element name="RapportThese" minOccurs="0" maxOccurs="unbounded">
+				<xsd:keyref name="rapport_these" refer="ProductionUnique">
+					<xsd:selector xpath="Rapport"/>
+					<xsd:field xpath="titre_production"/>
+				</xsd:keyref>
+			</xsd:element>
+
+			<xsd:element name="RevueThese" minOccurs="0" maxOccurs="unbounded">
+				<xsd:keyref name="revue_these" refer="ProductionUnique">
+					<xsd:selector xpath="Revue"/>
+					<xsd:field xpath="titre_production"/>
+				</xsd:keyref>
+			</xsd:element>
+
+			<xsd:element name="ArticleThese" minOccurs="0" maxOccurs="unbounded">
+				<xsd:keyref name="article_these" refer="ProductionUnique">
+					<xsd:selector xpath="Article_conference"/>
 					<xsd:field xpath="titre_production"/>
 				</xsd:keyref>
 			</xsd:element>
