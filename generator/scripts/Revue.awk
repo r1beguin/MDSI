@@ -4,12 +4,12 @@ BEGIN{
 
 NR>1{
 	print "<Revue> 
-	print " <titre_production>" $1 "</titre_production>
-	print " <annee_publication>" $2 "</annee_publication>
-	print " <nombre_pages>" $3 "</nombre_pages>
-	print " <Auteur_Production>" $4 "</Auteur_Production>
-	print " <nom_journal>" $5 "</nom_journal>
-	print " <classe_journal>" $6 "</classe_journal>
+	print "\t<titre_production>" $1 "</titre_production>
+	print "\t<annee_publication>" $2 "</annee_publication>
+	print "\t<nombre_pages>" $3 "</nombre_pages>
+	print "\t<Auteur_Production>" $4 "</Auteur_Production>
+	print "\t<nom_journal>" $5 "</nom_journal>
+	print "\t<classe_journal>" $6 "</classe_journal>
 	print "</Revue>
 }
 
