@@ -2,7 +2,7 @@ BEGIN{
     
 }
 
-NR>1{
+NR>0{
 	print "<Theme>"
     print "\t<acronyme_theme>" $1 "</acronyme_theme>"
 	print "\t<Description>" $2 "</Description>"

@@ -2,7 +2,7 @@ BEGIN{
     
 }
 
-NR>1{
+NR>0{
 	print "<Revue> 
 	print "\t<titre_production>" $1 "</titre_production>
 	print "\t<annee_publication>" $2 "</annee_publication>

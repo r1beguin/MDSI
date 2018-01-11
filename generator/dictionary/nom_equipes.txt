@@ -1,26 +1,26 @@
-TSF
-VERTICS
-ISI
-SARA
-CDA
-GEPETTO
-RAP
-RIS
-DISCO
-MAC
-ROC
-MINIC
-MOST
-OSE
-PHOTO
-M3
-MILE
-S4M
-ELiA
-MEMS
-MICA
-MPN
-MH2F
-ESE
-ISGE
-NEO
+Tolérance aux fautes et Sûreté de Fonctionnement Informatique	TSF
+Vérification de Systèmes Temporisés CritiqueS	VERTICS
+Ingénierie Système et Intégration	ISI
+Services et Architectures pour les Réseaux Avancés	SARA
+Calcul Distribué et Asynchronisme	CDA
+Mouvement des Systèmes Anthropomorphes	GEPETTO
+Robotique, Action et Perception	RAP
+Robotique et InteractionS	RIS
+DIagnostic, Supervision et COnduite	DISCO
+Méthodes et Algorithmes de Commande	MAC
+Recherche Opérationnelle, Optimisation Combinatoire et Contraintes	ROC
+MIcro et Nanosystèmes pour les Communications sans fil	MINIC
+Microondes et Opto-microondes pour Systèmes de Télécommunications	MOST
+Optoélectronique pour les Systèmes Embarqués	OSE
+Photonique	PHOTO
+Modélisation Multi-niveaux des Matériaux	M3
+Micro-Nanofluidique pour les sciences de la vie et de l’environnement	MILE
+Instrumentation embarquée et systèmes de surveillance intelligents	S4M
+Ingénierie pour les sciences du vivant	ELiA
+Microsystèmes électromécaniques	MEMS	
+Microsystèmes d'Analyse	MICA
+Matériaux et Procédés pour la Nanoélectronique	MPN
+Micro et nanosystèmes HyperFréquences Fluidiques	MH2F
+Énergie et systèmes embarqués	ESE
+Intégration de Systèmes de Gestion de l'Energie	ISGE
+Nano-ingénierie et intégration des oxydes métalliques et de leurs interfaces	NEO

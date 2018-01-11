@@ -2,7 +2,7 @@ BEGIN{
 
 }
 
-NR>1{
+NR>0{
     print "<Conference>"
     print "\t<nom_evenement>" $1 "</nom_evenement>"
 	print "\t<date_debut_evenement>" $2 "</date_debut_evenement>

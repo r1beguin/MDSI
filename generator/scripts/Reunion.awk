@@ -2,13 +2,10 @@ BEGIN{
 
 }
 
-NR>1{
+NR>0{
     print "<Reunion>"
-    print "\t<nom_evenement>" $1 "</nom_evenement>"
-	print "\t<date_debut_evenement>" $2 "</date_debut_evenement>
-	print "\t<date_fin_evenement>" $3 "</date_fin_evenement>"
-	print "\t<Theme_Evenement>" $4 "</Theme_Evenement>"
-	print "\t<Equipe_Evenement>" $5 "</Equipe_Evenement>"
+    print "\t<nom_evenement>Reunion" NR "</nom_evenement>"
+	#system("bash -c \"set t=$((`date +%s` + RANDOM % 100000)); date --date=@$t\"")
 	print "</Reunion>"
 }
 

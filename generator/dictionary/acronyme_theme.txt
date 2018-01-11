@@ -1,8 +1,8 @@
-IC
-RC
-ROB
-DO
-HOPES
-TICS
-MNBT
-GE
+IC	Informatique Critique
+RC	Réseaux et Communication
+ROB	Robotique
+DO	Décision et Optimisation
+HOPES	Hyperfréquences et Optique : de l'Electromagnétisme aux Système
+TICS	Technologie et Instrumentation pour le monitoring de systèmes complexes
+MNBT	Micro Nano Bio Technologies
+GE	Gestion de l'Energie
